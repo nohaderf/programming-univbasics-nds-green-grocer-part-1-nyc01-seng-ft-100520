@@ -25,7 +25,6 @@ end
 def consolidate_cart(cart)
   new_array = []
   cart.count do |array|
-    end
   end
 end
 
