@@ -30,7 +30,7 @@ def consolidate_cart(cart)
     item_name = item_hash[:item]
     find_item = find_item_by_name_in_collection(item_name, new_array)
     if find_item
-      item_hash[:count] += 1
+      new_array[:count] += 1
     else
       new_array << {
         :item => item_name,
