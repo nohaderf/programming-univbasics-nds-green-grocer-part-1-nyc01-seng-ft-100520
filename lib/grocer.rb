@@ -28,9 +28,9 @@ def consolidate_cart(cart)
   new_array = []
   cart.each do |item_hash|
     item_name = item_hash[:item]
-    item_info = find_item_by_name_in_collection(item_name, new_array)
-    if item_info 
-      item_info[:count] += 1
+    find_item = find_item_by_name_in_collection(item_name, new_array)
+    if find_item
+      item_hash[:count] += 1
     else
       new_array << {
         :item => item_name,
@@ -40,6 +40,5 @@ def consolidate_cart(cart)
       }
     end
   end
-  new_array
 end
 
