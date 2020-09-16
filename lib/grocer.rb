@@ -24,7 +24,6 @@ end
 
 def consolidate_cart(cart)
   new_array = []
-  counter = 0
   cart.count do |array|
     if array[:item]
   end
