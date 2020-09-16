@@ -26,20 +26,18 @@ end
 
 def consolidate_cart(cart)
   new_array = []
-  cart.each do |item_hash|
-    item_name = item_hash[:item]
+  cart.each do |item_hash|                                               # iterate into array to access hashes
+    item_name = item_hash[:item]                                         # item_hash[:item] will access the item name key
     find_item = find_item_by_name_in_collection(item_name, new_array)
-    if find_item
-      find_item[:count] += 1
-    else
-      new_array << {
-        :item => item_name,
-        :price => item_hash[:price],
-        :clearance => item_hash[:clearance],
-        :count => 1
+    if find_item                                                         # if item is true/already present in new_array
+      find_item[:count] += 1                                             # add 1 to the count
+    else {                                                               # else, add new hash with :key => values
+      :item => item_name,
+      :price => item_hash[:price],
+      :clearance => item_hash[:clearance],
+      :count => 1
       }
     end
   end
-  new_array
 end
 
