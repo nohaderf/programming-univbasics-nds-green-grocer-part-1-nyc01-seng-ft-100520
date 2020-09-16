@@ -25,8 +25,9 @@ end
 
 def consolidate_cart(cart)
   new_array = []
-  cart.each do |item|
-    
+  cart.each do |item_hash|
+    item_hash[:item] = item_name
+    item_info = find_item_by_name_in_collection(item_name, new_array)
   end
 end
 
