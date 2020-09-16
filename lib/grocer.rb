@@ -21,6 +21,7 @@ end
 # Consult README for inputs and outputs
   # REMEMBER: This returns a new Array that represents the cart. Don't merely
   # change `cart` (i.e. mutate) it. It's easier to return a new thing.
+# adds a count of one to each item when there are no duplicates
 
 def consolidate_cart(cart)
   new_array = []
