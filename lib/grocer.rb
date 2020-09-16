@@ -31,7 +31,7 @@ def consolidate_cart(cart)
     find_item = find_item_by_name_in_collection(item_name, new_array)
     if find_item                                                         # if item is true/already present in new_array
       find_item[:count] += 1                                             # add 1 to the count
-    else 
+    else                                                                 # else,
       new_array << {                                                               # else, add new hash with :key => values
       :item => item_name,
       :price => item_hash[:price],
