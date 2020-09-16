@@ -25,12 +25,6 @@ end
 
 def consolidate_cart(cart)
   new_array = []
-  cart.each do |hash_items| #iterate into array- first level
-    hash_items.count do |item_info, value| #iterate into each hash- second level
-      if new_array[:item_info] == nil
-        new_array << new_array[:item_info] 
-      end
-    end
-  end
+  cart.each_
 end
 
