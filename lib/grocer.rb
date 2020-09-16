@@ -25,6 +25,7 @@ end
 def consolidate_cart(cart)
   new_array = []
   cart.each do |array|
+    if array.each 
     new_array << array
   end
 end
