@@ -25,7 +25,7 @@ end
 
 def consolidate_cart(cart)
   new_array = []
-  count = Hash.new0
+  count = Hash.new 0
   cart.each do |item_hash|
     count[item_hash] += 1
   end
