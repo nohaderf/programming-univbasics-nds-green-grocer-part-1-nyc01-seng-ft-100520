@@ -25,7 +25,10 @@ end
 def consolidate_cart(cart)
   new_array = []
   cart.each do |array|
-    if array.each 
+    array.each do |item_info|
+      if new_array[item_info] == nil
+        new_array[item_info] = {}
+        new_array[item]
     new_array << array
   end
 end
